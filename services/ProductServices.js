@@ -4,34 +4,11 @@ const slugify = require('slugify');
 const Productmodel = require('../models/ProductModels');
 
 
-exports.createProd =asyncHandler(async (req, res) =>{
+exports.createProduct =asyncHandler(async (req, res) =>{
     req.body.slug = slugify(req.body.title);
     const Product = await  Productmodel.create(req.body);
     res.status(201).json({data: Product});
 })
-
-exports.createPro =asyncHandler(async (req, res) =>{
-    req.body.slug = slugify(req.body.title);
-    const Product = await  Productmodel.create(req.body);
-    res.status(201).json({data: Product});
-})
-
-exports.createP =asyncHandler(async (req, res) =>{
-    req.body.slug = slugify(req.body.title);
-    const Product = await  Productmodel.create(req.body);
-    res.status(201).json({data: Product});
-})
-exports.create =asyncHandler(async (req, res) =>{
-    req.body.slug = slugify(req.body.title);
-    const Product = await  Productmodel.create(req.body);
-    res.status(201).json({data: Product});
-})
-
-
-
-
-
-
 
 
 

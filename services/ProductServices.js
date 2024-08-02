@@ -20,6 +20,48 @@ exports.getAllProduct =asyncHandler(async (req, res) =>{
     res.status(201).json({ results :Product.length , data: Product});
 })
 
+
+
+
+
+exports.getAllProduct =asyncHandler(async (req, res) =>{
+    const page = 1;
+    const limit = 5 ;
+    const skip = (page -1 ) * limit;
+    const Product = await  Productmodel.find({}).skip(skip).limit(limit);
+    res.status(201).json({ results :Product.length , data: Product});
+})
+
+
+
+exports.getAllProduct =asyncHandler(async (req, res) =>{
+    const page = 1;
+    const limit = 5 ;
+    const skip = (page -1 ) * limit;
+    const Product = await  Productmodel.find({}).skip(skip).limit(limit);
+    res.status(201).json({ results :Product.length , data: Product});
+})
+
+
+
+exports.getAllProduct =asyncHandler(async (req, res) =>{
+    const page = 1;
+    const limit = 5 ;
+    const skip = (page -1 ) * limit;
+    const Product = await  Productmodel.find({}).skip(skip).limit(limit);
+    res.status(201).json({ results :Product.length , data: Product});
+})
+
+
+
+exports.getAllProduct =asyncHandler(async (req, res) =>{
+    const page = 1;
+    const limit = 5 ;
+    const skip = (page -1 ) * limit;
+    const Product = await  Productmodel.find({}).skip(skip).limit(limit);
+    res.status(201).json({ results :Product.length , data: Product});
+})
+
 exports.getoneProduct =asyncHandler(async (req, res) =>{
     const {id} = req.params;
     const Product = await  Productmodel.findById(id);

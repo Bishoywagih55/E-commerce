@@ -71,7 +71,13 @@ exports.createProductValidator = [
                         new Error(`no subcategory for this id ${subcategoryId}`)
             )}
         })
-    ),
+    )
+    .custom((val , {req}) => 
+    // eslint-disable-next-line no-shadow
+    subcategory.find({category : req.params.category}).then((subcategory) => {
+        console.log(subcategory);
+        
+    })),
     check('Brand')
     .optional()
     .isMongoId().withMessage("invalid id format Brand")
